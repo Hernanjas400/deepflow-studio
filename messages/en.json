@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "ecosystem": "Ecosystem",
+    "products": "Products",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Operational Intelligence Ecosystem",
+    "tagline": "Operational Intelligence for Modern Business.",
+    "ctaPrimary": "Book a Demo",
+    "ctaSecondary": "Explore the Ecosystem"
+  },
+  "flow": {
+    "step1": "Meta Ads",
+    "step2": "WhatsApp AI",
+    "step3": "Smart CRM",
+    "step4": "Automation",
+    "step5": "Revenue",
+    "step6": "Analytics"
+  },
+  "problem": {
+    "badge": "The problem",
+    "title": "Your business is drowning in tools",
+    "subtitle": "Every system promised to solve everything. The result: more complexity, more friction, less growth.",
+    "tools": {
+      "title": "Too many tools",
+      "description": "CRM, WhatsApp, email, ads, analytics in separate silos. The data you need is always in another system."
+    },
+    "manual": {
+      "title": "Endless manual tasks",
+      "description": "One-by-one follow-ups, copying data between platforms, manually answering messages. Your team wastes hours on work AI should be doing."
+    },
+    "friction": {
+      "title": "Friction slowing growth",
+      "description": "Leads going cold waiting for a response. Opportunities lost in slow processes. The invisible cost of not automating."
+    }
+  },
+  "services": {
+    "title": "The Ecosystem",
+    "subtitle": "Every tool designed to eliminate friction and generate real results.",
+    "wapibots": {
+      "name": "WapiBots",
+      "badge": "Star Product",
+      "description": "AI-powered WhatsApp automation. Intelligent conversations, integrated CRM, lead recovery and funnels that convert into real customers.",
+      "features": ["Conversational AI", "Integrated CRM", "Smart Funnels", "Analytics", "AI Agents"]
+    },
+    "deepops": {
+      "name": "DeepOps AI",
+      "description": "Operational automation infrastructure. Orchestrate complex processes with artificial intelligence in real time."
+    },
+    "deepsales": {
+      "name": "DeepSales AI",
+      "description": "Growth and revenue automation platform. AI SDR, lead scoring and automated nurturing."
+    },
+    "deeplife": {
+      "name": "DeepLife",
+      "description": "Personal productivity and intelligent life automation systems."
+    }
+  },
+  "infrastructure": {
+    "badge": "AI Infrastructure",
+    "title": "Technology that works while you sleep",
+    "subtitle": "A complete AI stack designed to run your business on autopilot.",
+    "cap1Title": "AI Automation",
+    "cap1Desc": "Processes that run themselves, 24/7, without human intervention.",
+    "cap2Title": "Conversational AI",
+    "cap2Desc": "AI agents that talk, understand, and convert on your behalf.",
+    "cap3Title": "Predictive Intelligence",
+    "cap3Desc": "Anticipate your customers' behavior before they act.",
+    "cap4Title": "Workflow Automation",
+    "cap4Desc": "Complex flows orchestrated with surgical precision.",
+    "cap5Title": "AI Operations",
+    "cap5Desc": "Your entire operation managed by intelligent systems.",
+    "cap6Title": "Omnichannel Systems",
+    "cap6Desc": "WhatsApp, email, ads, CRM: all connected, all synchronized."
+  },
+  "results": {
+    "badge": "Real results",
+    "title": "Numbers that speak for themselves",
+    "subtitle": "The systems we implement generate measurable impact from the first month.",
+    "m1": "More operational efficiency",
+    "m2": "More lead conversions",
+    "m3": "Uninterrupted operations",
+    "m4": "Fewer manual tasks",
+    "m5": "Lost leads",
+    "m6": "Unlimited scalability",
+    "beforeLabel": "Before",
+    "afterLabel": "After",
+    "before1": "Manual follow-up",
+    "after1": "AI responds in seconds",
+    "before2": "Data in silos",
+    "after2": "Everything connected and synced",
+    "before3": "Lost leads",
+    "after3": "0 missed opportunities",
+    "before4": "9-to-6 operations",
+    "after4": "24/7 automated operations"
+  },
+  "philosophy": {
+    "preQuote": "Technology should",
+    "highlight": "eliminate human friction.",
+    "attribution": "Deep Flow Studio — Core Philosophy",
+    "line1": "We don't build software.",
+    "line2": "We build systems that think, act, and improve on their own.",
+    "line3": "So you can focus on what truly matters."
+  },
+  "contact": {
+    "badge": "Get started",
+    "title": "Ready to operate in AI mode",
+    "subtitle": "Tell us about your business and in 48h we'll show you exactly how we automate it.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "you@email.com",
+    "messagePlaceholder": "Tell us about your business and what you want to automate...",
+    "submit": "Send message",
+    "orText": "or prefer",
+    "demo": "Book a demo",
+    "success": "Message received! We'll get back to you within 48h."
+  }
+}
