@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Read(//c/Users/Usuario/.claude/projects/c--Users-Usuario-deepflow-studio/memory/**)"
+      "Read(//c/Users/Usuario/.claude/projects/c--Users-Usuario-deepflow-studio/memory/**)",
+      "Bash(npx eslint *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o NUL -w \"HTTP %{http_code}\\\\n\" http://localhost:3000/es)",
+      "Bash(curl -s http://localhost:3000/es)",
+      "Bash(curl -s -o NUL -w \"EN: HTTP %{http_code}\\\\n\" http://localhost:3000/en)",
+      "Bash(curl -s http://localhost:3000/en)"
     ]
   }
 }

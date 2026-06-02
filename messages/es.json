@@ -5,114 +5,165 @@
     "contact": "Contacto"
   },
   "hero": {
-    "badge": "Ecosistema de Inteligencia Operacional",
-    "tagline": "Tu negocio no necesita otra web. Necesita flow.",
-    "ctaPrimary": "Hablemos",
-    "ctaSecondary": "Explorar el Ecosistema"
-  },
-  "flow": {
-    "step1": "Meta Ads",
-    "step2": "WhatsApp AI",
-    "step3": "Smart CRM",
-    "step4": "Automation",
-    "step5": "Revenue",
-    "step6": "Analytics"
+    "badge": "Deep Flow Studio — Inteligencia operacional",
+    "taglineNew": "Convertimos WhatsApp y procesos manuales en un sistema que trabaja para vos las 24 horas.",
+    "ctaPrimary": "Reservá tu diagnóstico",
+    "ctaSecondary": "Ver cómo funciona",
+    "g1": "Sin costo",
+    "g2": "30 minutos",
+    "g3": "Sin compromiso",
+    "g4": "Propuesta concreta",
+    "panelTitle": "Operación automatizada",
+    "panelSubtitle": "En tiempo real",
+    "panelFooter": "Ejemplo ilustrativo de una operación automatizada con IA",
+    "impactLine": "AUTOMATIZACIÓN · IA · CRECIMIENTO",
+    "headlineStart": "Tu empresa puede",
+    "headlineMid": "vender más",
+    "headlineEnd": "y trabajar menos.",
+    "metric1": "Conversaciones atendidas",
+    "metric2": "Leads recuperados",
+    "metric3": "Presupuestos enviados",
+    "metric4": "Ventas generadas"
   },
   "problem": {
     "badge": "El problema",
-    "title": "Tu negocio se ahoga en herramientas",
-    "subtitle": "Cada sistema prometía solucionar todo. El resultado: más complejidad, más fricción, menos crecimiento.",
+    "titleStart": "Cada tarea manual que hace tu equipo,",
+    "titleEnd": "la IA ya la resuelve sola.",
+    "subtitle": "El problema no es la falta de tecnología. Es que nadie la integró a tu operación real.",
+    "tension": "Tiempo perdido.  Oportunidades perdidas.  Dinero perdido.",
+    "resultLabel": "Resultado",
     "tools": {
-      "title": "Demasiadas herramientas",
-      "description": "CRM, WhatsApp, email, ads, analytics en silos separados. El dato que necesitás siempre está en otro sistema."
+      "title": "Mensajes sin automatizar",
+      "description": "Consultas respondidas manualmente, una por una, todos los días. Tu equipo dedica horas a tareas repetitivas mientras siguen entrando nuevos clientes.",
+      "result": "Tiempos de respuesta lentos y oportunidades perdidas."
     },
     "manual": {
-      "title": "Tareas manuales infinitas",
-      "description": "Seguimiento uno a uno, copiar datos entre plataformas, responder mensajes a mano. Tu equipo pierde horas en trabajo que debería hacer la IA."
+      "title": "Leads que se enfrían",
+      "description": "Los prospectos llegan, pero el seguimiento depende de recordatorios, planillas o disponibilidad del equipo.",
+      "result": "Clientes que terminan comprando en otro lado."
     },
     "friction": {
-      "title": "Fricción que frena el crecimiento",
-      "description": "Leads que se enfrían esperando respuesta. Oportunidades perdidas en procesos lentos. El costo invisible de no automatizar."
+      "title": "Información fragmentada",
+      "description": "WhatsApp, CRM, Excel y procesos separados que no comparten información entre sí.",
+      "result": "Decisiones tomadas con datos incompletos y una operación difícil de escalar."
     }
   },
   "services": {
-    "title": "El Ecosistema",
-    "subtitle": "Cada herramienta diseñada para eliminar fricción y generar resultados reales.",
+    "titleStart": "Sistemas que ya funcionan.",
+    "titleEnd": "No demos que nunca llegan a producción.",
+    "subtitle": "No creemos en herramientas aisladas. Creamos ecosistemas donde WhatsApp, automatización e inteligencia artificial trabajan como un único sistema.",
     "wapibots": {
       "name": "WapiBots",
-      "badge": "Producto Estrella",
-      "description": "Automatización de WhatsApp potenciada por IA. Conversaciones inteligentes, CRM integrado, lead recovery y funnels que convierten en clientes reales.",
-      "features": ["IA Conversacional", "CRM Integrado", "Smart Funnels", "Analytics", "AI Agents"]
+      "badge": "Producto propio",
+      "description": "Automatización de WhatsApp con IA: atención al cliente, gestión de turnos, catálogo de productos y documentos programados — funcionando las 24 horas.",
+      "features": ["Agente de IA", "Agenda inteligente", "Catálogo automático", "Documentos programados", "Menú interactivo"],
+      "cta": "Ver WapiBots →",
+      "m1label": "Más conversiones",
+      "m2label": "Respuesta automática",
+      "m3label": "Leads perdidos",
+      "m4label": "Integrado al CRM",
+      "next": "Próxima fase del ecosistema →"
     },
     "deepops": {
-      "name": "DeepOps AI",
-      "description": "Infraestructura de automatización operacional. Orquesta procesos complejos con inteligencia artificial en tiempo real."
+      "name": "Automatización de procesos",
+      "description": "Eliminamos tareas repetitivas conectando WhatsApp, herramientas existentes y procesos internos. Menos carga operativa. Más tiempo para vender."
     },
     "deepsales": {
-      "name": "DeepSales AI",
-      "description": "Plataforma de crecimiento y revenue automation. SDR con IA, lead scoring y nurturing automatizado."
+      "name": "Presencia digital",
+      "description": "Sitios web, landing pages y embudos pensados para generar oportunidades reales. Porque una web linda que no vende sigue siendo un costo."
     },
     "deeplife": {
-      "name": "DeepLife",
-      "description": "Sistemas de productividad personal y automatización de vida inteligente."
+      "name": "Consultoría en IA",
+      "description": "Analizamos tu operación y detectamos qué procesos conviene automatizar y cuáles no. IA con retorno real. No experimentos."
     }
   },
   "infrastructure": {
-    "badge": "Infraestructura IA",
-    "title": "Tecnología que trabaja mientras dormís",
-    "subtitle": "Un stack completo de inteligencia artificial diseñado para operar tu negocio en piloto automático.",
-    "cap1Title": "AI Automation",
-    "cap1Desc": "Procesos que se ejecutan solos, 24/7, sin intervención humana.",
-    "cap2Title": "Conversational AI",
-    "cap2Desc": "Agentes de IA que hablan, entienden y convierten por vos.",
-    "cap3Title": "Predictive Intelligence",
-    "cap3Desc": "Anticipá el comportamiento de tus clientes antes de que actúen.",
-    "cap4Title": "Workflow Automation",
-    "cap4Desc": "Flujos complejos orquestados con precisión quirúrgica.",
-    "cap5Title": "AI Operations",
-    "cap5Desc": "Tu operación entera gestionada por sistemas inteligentes.",
-    "cap6Title": "Omnichannel Systems",
-    "cap6Desc": "WhatsApp, email, ads, CRM: todo conectado, todo sincronizado."
+    "badge": "Método",
+    "titleStart": "No comenzamos por la tecnología.",
+    "titleEnd": "Comenzamos por tu negocio.",
+    "subtitle": "Seis pasos para transformar procesos manuales en una operación automatizada y escalable.",
+    "stage1": "DESCUBRIR",
+    "stage2": "CONSTRUIR",
+    "stage3": "ESCALAR",
+    "footer": "Tecnología, automatización e IA trabajando como un único sistema",
+    "s1title": "01 · Diagnóstico",
+    "s1desc": "Descubrimos dónde se pierde tiempo, dinero y oportunidades en tu operación actual.",
+    "s2title": "02 · Estrategia",
+    "s2desc": "Diseñamos un plan de automatización con impacto real. Solo automatizamos lo que genera resultado.",
+    "s3title": "03 · Implementación",
+    "s3desc": "Integramos la solución a las herramientas que ya utilizás. Sin cambiar tu forma de trabajar.",
+    "s4title": "04 · Operación",
+    "s4desc": "Tu sistema comienza a trabajar de forma autónoma. Más rápido, predecible y escalable.",
+    "s5title": "05 · Medición",
+    "s5desc": "Métricas claras y visibilidad completa de los resultados. Sabés exactamente qué está pasando.",
+    "s6title": "06 · Evolución",
+    "s6desc": "La solución crece junto con tu negocio. El sistema mejora a medida que escala tu operación."
   },
   "results": {
-    "badge": "Resultados reales",
-    "title": "Números que hablan solos",
-    "subtitle": "Los sistemas que implementamos generan impacto medible desde el primer mes.",
-    "m1": "Más eficiencia operacional",
-    "m2": "Más conversiones de leads",
-    "m3": "Operación sin interrupciones",
-    "m4": "Menos tareas manuales",
-    "m5": "Leads perdidos",
-    "m6": "Escalabilidad sin límites",
+    "badge": "Resultados",
+    "titleStart": "Implementamos.",
+    "titleEnd": "No prometemos.",
+    "subtitle": "Tecnología con impacto real. No tecnología por moda.",
+    "m1value": "24/7",
+    "m1label": "Operación continua",
+    "m2value": "−80%",
+    "m2label": "Menos tareas manuales",
+    "m3value": "0",
+    "m3label": "Oportunidades sin seguimiento",
+    "m4value": "100%",
+    "m4label": "Información centralizada",
+    "m5value": "Escalable",
+    "m5label": "Preparado para crecer",
+    "m6value": "Control total",
+    "m6label": "Métricas en tiempo real",
     "beforeLabel": "Antes",
     "afterLabel": "Después",
-    "before1": "Seguimiento manual",
-    "after1": "IA responde en segundos",
-    "before2": "Datos en silos",
-    "after2": "Todo conectado y sincronizado",
-    "before3": "Leads perdidos",
-    "after3": "0 oportunidades perdidas",
-    "before4": "Operación de 9 a 18hs",
-    "after4": "Operación 24/7 automatizada"
+    "before1": "Respuestas manuales y lentas",
+    "after1": "Atención automática en segundos",
+    "before2": "Sistemas desconectados",
+    "after2": "Información integrada en tiempo real",
+    "before3": "Leads sin seguimiento",
+    "after3": "Procesos automatizados de recuperación",
+    "before4": "Operación limitada por horarios",
+    "after4": "Funcionamiento continuo 24/7",
+    "disclaimer": "Cada implementación es diferente. Los resultados dependen del proceso, la industria y el nivel de automatización aplicado."
   },
   "philosophy": {
-    "preQuote": "La tecnología debería",
-    "highlight": "eliminar la fricción humana.",
-    "attribution": "Deep Flow Studio — Core Philosophy",
-    "line1": "No construimos software.",
-    "line2": "Construimos sistemas que piensan, actúan y mejoran solos.",
-    "line3": "Para que vos te enfoques en lo que realmente importa."
+    "badge": "Diferencial",
+    "preQuote": "Comprendemos las dos dimensiones:",
+    "highlight": "la del negocio y la de la tecnología.",
+    "subtitle": "No implementamos herramientas. Diseñamos sistemas que funcionan en operaciones reales.",
+    "d1title": "Negocio + Tecnología",
+    "d1desc": "Un analista de sistemas a cargo de cada proyecto. Sin intermediarios. Sin soluciones genéricas.",
+    "d2title": "Desarrollo propio",
+    "d2desc": "WapiBots es tecnología desarrollada por nosotros. No revendemos herramientas de terceros.",
+    "d3title": "Atención local",
+    "d3desc": "Un único interlocutor técnico y comercial. De principio a fin. En tu zona horaria."
+  },
+  "about": {
+    "badge": "Quiénes somos",
+    "titleStart": "Tres revoluciones tecnológicas.",
+    "titleEnd": "Siempre del lado de adentro.",
+    "quote": "No seguimos tendencias. Implementamos aquello que genera resultados.",
+    "text1": "Desde los primeros sistemas informáticos y la llegada de Internet, pasando por la revolución móvil y hasta la inteligencia artificial actual. Más de cuatro décadas observando cómo cambia la tecnología y cómo impacta en los negocios.",
+    "text2": "Hoy aplicamos esa experiencia para ayudar a las empresas a integrar IA donde realmente genera valor."
   },
   "contact": {
     "badge": "Empezá hoy",
-    "title": "Listo para operar en modo IA",
-    "subtitle": "Contanos tu negocio y en 48hs te mostramos exactamente cómo lo automatizamos.",
+    "titleStart": "El futuro de tu operación",
+    "titleEnd": "comienza con una conversación.",
+    "subtitle": "30 minutos, sin costo y sin tecnicismos. Analizamos tu negocio y te mostramos exactamente qué se puede optimizar. La decisión es tuya.",
+    "guarantee1": "Diagnóstico sin costo",
+    "guarantee2": "Reunión de 30 minutos",
+    "guarantee3": "Sin compromiso",
+    "guarantee4": "Propuesta concreta",
+    "guaranteeTitle": "Lo que incluye",
     "namePlaceholder": "Tu nombre",
     "emailPlaceholder": "tu@email.com",
     "messagePlaceholder": "Contanos sobre tu negocio y qué querés automatizar...",
-    "submit": "Enviar mensaje",
+    "submit": "Reservá tu diagnóstico",
+    "demo": "Reservá tu diagnóstico",
     "orText": "o si preferís",
-    "demo": "Agendar una demo",
     "success": "¡Recibimos tu mensaje! Te contactamos en menos de 48hs."
   }
 }

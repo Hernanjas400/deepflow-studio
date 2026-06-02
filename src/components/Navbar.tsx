@@ -16,88 +16,88 @@ export default function Navbar() {
   }
 
   return (
-    <nav id="navbar" className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 lg:px-10" style={{ height: '64px' }}>
+    <nav id="navbar" className="fixed top-0 left-0 right-0 z-50 flex items-center" style={{ height: '68px' }}>
       <div
-        className="absolute inset-0 glass"
-        style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}
+        className="absolute inset-0"
+        style={{
+          background: 'rgba(8,8,8,0.92)',
+          backdropFilter: 'blur(16px)',
+          WebkitBackdropFilter: 'blur(16px)',
+          borderBottom: '1px solid rgba(255,255,255,0.07)',
+        }}
       />
 
-      {/* Logo */}
-      <div className="relative flex items-center gap-1 select-none">
-        <span
-          className="text-xl tracking-[0.12em] uppercase"
-          style={{ fontWeight: 100 }}
-        >
-          DEEP
-        </span>
-        <span
-          className="text-xl tracking-[0.12em] uppercase gradient-text"
-          style={{ fontWeight: 800 }}
-        >
-          FLOW
-        </span>
-        <span
-          className="ml-1 text-[10px] tracking-[0.3em] uppercase text-white/40 self-end mb-0.5"
-          style={{ fontWeight: 400 }}
-        >
-          STUDIO
-        </span>
-      </div>
+      <div className="relative w-full flex items-center justify-between" style={{ paddingLeft: 56, paddingRight: 56 }}>
 
-      {/* Nav links */}
-      <div className="relative hidden md:flex items-center gap-8">
-        <a
-          href="#ecosystem"
-          className="text-sm text-white/60 hover:text-white transition-colors"
-        >
-          {t('ecosystem')}
-        </a>
-        <a
-          href="#products"
-          className="text-sm text-white/60 hover:text-white transition-colors"
-        >
-          {t('products')}
-        </a>
-        <a
-          href="#contact"
-          className="text-sm text-white/60 hover:text-white transition-colors"
-        >
-          {t('contact')}
-        </a>
-      </div>
-
-      {/* Lang switcher + CTA */}
-      <div className="relative flex items-center gap-4">
-        <div className="flex items-center gap-1 text-xs text-white/40">
-          <button
-            onClick={() => switchLocale('es')}
-            className={`px-1.5 py-0.5 rounded transition-colors ${
-              currentLocale === 'es'
-                ? 'text-white font-medium'
-                : 'hover:text-white/70'
-            }`}
-          >
-            ES
-          </button>
-          <span className="text-white/20">|</span>
-          <button
-            onClick={() => switchLocale('en')}
-            className={`px-1.5 py-0.5 rounded transition-colors ${
-              currentLocale === 'en'
-                ? 'text-white font-medium'
-                : 'hover:text-white/70'
-            }`}
-          >
-            EN
-          </button>
+        {/* Logo */}
+        <div className="flex items-center gap-1.5 select-none">
+          <span style={{ fontSize: '1.35rem', fontWeight: 200, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#ffffff' }}>
+            DEEP
+          </span>
+          <span className="gradient-text" style={{ fontSize: '1.35rem', fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+            FLOW
+          </span>
+          <span style={{ fontSize: '0.6rem', fontWeight: 400, letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginLeft: 4, alignSelf: 'flex-end', marginBottom: 2 }}>
+            STUDIO
+          </span>
         </div>
 
-        <a
-          href="#contact"
-          className="btn-primary hidden sm:flex items-center px-5 py-2 rounded-full text-sm font-medium text-white"
-        >
-          {t('contact')}
-        </a>
+        {/* Menú central */}
+        <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-10">
+          <a href="#ecosystem" style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={e => (e.currentTarget.style.color='#fff')} onMouseOut={e => (e.currentTarget.style.color='rgba(255,255,255,0.6)')}>
+            {t('ecosystem')}
+          </a>
+          <a href="#products" style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={e => (e.currentTarget.style.color='#fff')} onMouseOut={e => (e.currentTarget.style.color='rgba(255,255,255,0.6)')}>
+            {t('products')}
+          </a>
+          <a href="#contact" style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.2s' }} onMouseOver={e => (e.currentTarget.style.color='#fff')} onMouseOut={e => (e.currentTarget.style.color='rgba(255,255,255,0.6)')}>
+            {t('contact')}
+          </a>
+        </div>
+
+        {/* Bloque derecho */}
+        <div className="flex items-center gap-6">
+          <div className="flex items-center gap-2" style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.45)' }}>
+            <button
+              onClick={() => switchLocale('es')}
+              style={{
+                fontSize: '0.85rem',
+                fontWeight: currentLocale === 'es' ? 600 : 400,
+                color: currentLocale === 'es' ? '#ffffff' : 'rgba(255,255,255,0.45)',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                padding: '2px 4px',
+              }}
+            >
+              ES
+            </button>
+            <span style={{ color: 'rgba(255,255,255,0.2)' }}>|</span>
+            <button
+              onClick={() => switchLocale('en')}
+              style={{
+                fontSize: '0.85rem',
+                fontWeight: currentLocale === 'en' ? 600 : 400,
+                color: currentLocale === 'en' ? '#ffffff' : 'rgba(255,255,255,0.45)',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                padding: '2px 4px',
+              }}
+            >
+              EN
+            </button>
+          </div>
+
+          <a
+            href="#contact"
+            className="btn-primary hidden sm:flex items-center rounded-full font-semibold text-white"
+            style={{ fontSize: '0.9rem', padding: '0.55rem 1.6rem', whiteSpace: 'nowrap' }}
+          >
+            {t('contact')}
+          </a>
+        </div>
+
       </div>
     </nav>
   )

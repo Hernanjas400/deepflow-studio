@@ -26,7 +26,7 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <main style={{ paddingTop: '64px' }}>
+      <main className="pt-16 overflow-x-hidden">
         {children}
       </main>
     </NextIntlClientProvider>

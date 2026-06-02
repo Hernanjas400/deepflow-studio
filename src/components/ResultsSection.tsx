@@ -2,31 +2,35 @@
 
 import { useTranslations } from 'next-intl'
 import { motion, type Variants } from 'framer-motion'
+import ResultsCanvas from './ResultsCanvas'
 
-const METRICS = [
-  { value: '10×', labelKey: 'm1', color: '#00D1FF' },
-  { value: '3×', labelKey: 'm2', color: '#FF2FD1' },
-  { value: '24/7', labelKey: 'm3', color: '#7B2CFF' },
-  { value: '−80%', labelKey: 'm4', color: '#00D1FF' },
-  { value: '0', labelKey: 'm5', color: '#FF2FD1' },
-  { value: '∞', labelKey: 'm6', color: '#7B2CFF' },
+const METRICS_FEATURED = [
+  { valueKey: 'm1value', labelKey: 'm1label', color: '#00D1FF' },
+  { valueKey: 'm2value', labelKey: 'm2label', color: '#FF2FD1' },
+  { valueKey: 'm3value', labelKey: 'm3label', color: '#7B2CFF' },
 ] as const
 
-const BEFORE_AFTER_KEYS = [
-  { before: 'before1', after: 'after1', color: '#00D1FF' },
-  { before: 'before2', after: 'after2', color: '#7B2CFF' },
-  { before: 'before3', after: 'after3', color: '#FF2FD1' },
-  { before: 'before4', after: 'after4', color: '#00D1FF' },
+const METRICS_SECONDARY = [
+  { valueKey: 'm4value', labelKey: 'm4label', color: '#00D1FF' },
+  { valueKey: 'm5value', labelKey: 'm5label', color: '#FF2FD1' },
+  { valueKey: 'm6value', labelKey: 'm6label', color: '#7B2CFF' },
+] as const
+
+const BEFORE_AFTER = [
+  { beforeKey: 'before1', afterKey: 'after1', color: '#00D1FF' },
+  { beforeKey: 'before2', afterKey: 'after2', color: '#7B2CFF' },
+  { beforeKey: 'before3', afterKey: 'after3', color: '#FF2FD1' },
+  { beforeKey: 'before4', afterKey: 'after4', color: '#00D1FF' },
 ] as const
 
 const container: Variants = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.1, delayChildren: 0.05 } },
+  visible: { transition: { staggerChildren: 0.08, delayChildren: 0.05 } },
 }
 
-const metric: Variants = {
-  hidden: { opacity: 0, scale: 0.88 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } },
+const item: Variants = {
+  hidden: { opacity: 0, scale: 0.92 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.45, ease: 'easeOut' } },
 }
 
 export default function ResultsSection() {
@@ -35,136 +39,259 @@ export default function ResultsSection() {
   return (
     <section
       id="results"
-      className="relative py-28 px-6 lg:px-10 overflow-hidden"
-      style={{ background: '#050505' }}
+      className="relative overflow-hidden"
+      style={{ background: '#0a0a0c', scrollMarginTop: '80px', paddingTop: '7rem', paddingBottom: '7rem' }}
     >
-      <div
-        className="blob"
-        style={{
-          width: '55vw',
-          height: '50vh',
-          top: '0',
-          right: '-15%',
-          background: 'rgba(0, 209, 255, 0.05)',
-          animationDuration: '13s',
-        }}
-      />
-      <div
-        className="blob"
-        style={{
-          width: '40vw',
-          height: '40vh',
-          bottom: '5%',
-          left: '-8%',
-          background: 'rgba(123, 44, 255, 0.06)',
-          animationDuration: '17s',
-          animationDelay: '-7s',
-        }}
-      />
+      <ResultsCanvas />
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        background: 'radial-gradient(ellipse at 70% 30%, rgba(0,209,255,0.05) 0%, transparent 60%)',
+        pointerEvents: 'none',
+      }} />
+      <div className="blob" style={{ width:'55vw', height:'50vh', top:'0', right:'-15%', background:'rgba(0,209,255,0.04)', animationDuration:'13s' }} />
+      <div className="blob" style={{ width:'40vw', height:'40vh', bottom:'5%', left:'-8%', background:'rgba(123,44,255,0.05)', animationDuration:'17s', animationDelay:'-7s' }} />
+
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-12 lg:px-20">
+
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16 text-center max-w-2xl mx-auto"
+          style={{ textAlign: 'center', marginBottom: '4rem' }}
         >
-          <span className="text-xs tracking-widest uppercase text-white/30 font-medium">
+          <span style={{
+            fontSize: '0.8rem',
+            letterSpacing: '0.25em',
+            textTransform: 'uppercase',
+            color: '#00D1FF',
+            fontWeight: 600,
+            display: 'block',
+            marginBottom: '1.25rem',
+          }}>
             {t('badge')}
           </span>
-          <h2 className="mt-3 text-4xl lg:text-5xl font-bold text-white leading-tight">
-            {t('title')}
+
+          <h2 style={{
+            fontSize: 'clamp(2.2rem, 4.5vw, 3.6rem)',
+            fontWeight: 800,
+            color: '#ffffff',
+            lineHeight: 1.1,
+            letterSpacing: '-0.03em',
+            marginBottom: '1.5rem',
+          }}>
+            <span className="gradient-text-flow">{t('titleStart')}</span>{' '}
+            {t('titleEnd')}
           </h2>
-          <p className="mt-4 text-white/50 text-lg leading-relaxed">{t('subtitle')}</p>
+
+          <p style={{
+            fontSize: 'clamp(1rem, 2vw, 1.2rem)',
+            color: 'rgba(255,255,255,0.5)',
+            lineHeight: 1.7,
+            maxWidth: 560,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+          }}>
+            {t('subtitle')}
+          </p>
         </motion.div>
 
-        {/* Metrics grid */}
+        {/* Métricas nivel 1 */}
         <motion.div
           variants={container}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16"
+          style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16, marginBottom: 16 }}
         >
-          {METRICS.map((m) => (
+          {METRICS_FEATURED.map((m) => (
             <motion.div
-              key={m.labelKey}
-              variants={metric}
-              className="relative glass rounded-2xl p-7 flex flex-col gap-2 overflow-hidden group"
+              key={m.valueKey}
+              variants={item}
+              style={{
+                position: 'relative',
+                background: 'rgba(255,255,255,0.05)',
+                border: `1px solid ${m.color}25`,
+                borderRadius: 18,
+                padding: '2rem 1.75rem',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 10,
+                overflow: 'hidden',
+                backdropFilter: 'blur(12px)',
+              }}
             >
-              <div
-                aria-hidden
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl"
-                style={{
-                  background: `radial-gradient(circle at 30% 50%, ${m.color}08 0%, transparent 65%)`,
-                }}
-              />
-              <span
-                className="text-[clamp(2.5rem,5vw,3.5rem)] font-black leading-none tracking-tight"
-                style={{ color: m.color, filter: `drop-shadow(0 0 12px ${m.color}80)` }}
-              >
-                {m.value}
+              <span style={{
+                fontSize: 'clamp(2.4rem, 4vw, 3.5rem)',
+                fontWeight: 800,
+                color: m.color,
+                lineHeight: 1,
+                filter: `drop-shadow(0 0 12px ${m.color}70)`,
+              }}>
+                {t(m.valueKey)}
               </span>
-              <span className="text-sm text-white/45 leading-snug font-medium">
+              <span style={{
+                fontSize: '0.9rem',
+                color: 'rgba(255,255,255,0.55)',
+                lineHeight: 1.4,
+                fontWeight: 500,
+              }}>
+                {t(m.labelKey)}
+              </span>
+              <div style={{
+                position: 'absolute',
+                bottom: 0, left: 0, right: 0,
+                height: 2,
+                background: `linear-gradient(90deg, transparent, ${m.color}50, transparent)`,
+              }} />
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Métricas nivel 2 */}
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16, marginBottom: '3rem' }}
+        >
+          {METRICS_SECONDARY.map((m) => (
+            <motion.div
+              key={m.valueKey}
+              variants={item}
+              style={{
+                position: 'relative',
+                background: 'rgba(255,255,255,0.03)',
+                border: '1px solid rgba(255,255,255,0.07)',
+                borderRadius: 14,
+                padding: '1.25rem 1.5rem',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 12,
+                flexWrap: 'wrap',
+              }}
+            >
+              <span style={{
+                fontSize: 'clamp(1.4rem, 2.5vw, 2rem)',
+                fontWeight: 800,
+                color: m.color,
+                lineHeight: 1,
+                flexShrink: 0,
+              }}>
+                {t(m.valueKey)}
+              </span>
+              <span style={{
+                fontSize: '0.8rem',
+                color: 'rgba(255,255,255,0.45)',
+                lineHeight: 1.4,
+                fontWeight: 500,
+              }}>
                 {t(m.labelKey)}
               </span>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Before / After */}
+        {/* Tabla Antes / Después */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="glass rounded-3xl overflow-hidden"
+          style={{
+            background: 'rgba(255,255,255,0.03)',
+            border: '1px solid rgba(255,255,255,0.08)',
+            borderRadius: 24,
+            overflow: 'hidden',
+            backdropFilter: 'blur(16px)',
+          }}
         >
-          {/* Header row */}
-          <div
-            className="grid grid-cols-2 px-8 py-4"
-            style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}
-          >
-            <span className="text-xs font-semibold tracking-widest uppercase text-white/25">
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            padding: '1.25rem 2.5rem',
+            borderBottom: '1px solid rgba(255,255,255,0.06)',
+            background: 'rgba(255,255,255,0.02)',
+          }}>
+            <span style={{
+              fontSize: '0.7rem', fontWeight: 700,
+              letterSpacing: '0.22em', textTransform: 'uppercase',
+              color: 'rgba(255,255,255,0.75)',
+            }}>
               {t('beforeLabel')}
             </span>
-            <span className="text-xs font-semibold tracking-widest uppercase text-white/25 pl-6">
+            <span style={{
+              fontSize: '0.7rem', fontWeight: 700,
+              letterSpacing: '0.22em', textTransform: 'uppercase',
+              color: 'rgba(255,255,255,0.75)',
+              paddingLeft: '2rem',
+            }}>
               {t('afterLabel')}
             </span>
           </div>
 
-          {BEFORE_AFTER_KEYS.map((row, i) => (
+          {BEFORE_AFTER.map((row, i) => (
             <div
-              key={row.before}
-              className="grid grid-cols-2 px-8 py-5"
+              key={row.beforeKey}
               style={{
-                borderBottom:
-                  i < BEFORE_AFTER_KEYS.length - 1
-                    ? '1px solid rgba(255,255,255,0.04)'
-                    : 'none',
+                display: 'grid',
+                gridTemplateColumns: '1fr 1fr',
+                padding: '1.5rem 2.5rem',
+                borderBottom: i < BEFORE_AFTER.length - 1 ? '1px solid rgba(255,255,255,0.04)' : 'none',
+                alignItems: 'center',
               }}
             >
-              {/* Before */}
-              <div className="flex items-center gap-3 pr-4">
-                <span className="text-sm text-white/35 line-through decoration-white/20">
-                  {t(row.before)}
-                </span>
-              </div>
-
-              {/* After */}
-              <div className="flex items-center gap-3 pl-6" style={{ borderLeft: '1px solid rgba(255,255,255,0.06)' }}>
-                <span
-                  className="w-1.5 h-1.5 rounded-full shrink-0"
-                  style={{ background: row.color, boxShadow: `0 0 6px ${row.color}` }}
-                />
-                <span className="text-sm font-medium" style={{ color: row.color }}>
-                  {t(row.after)}
+              <span style={{
+                fontSize: '0.95rem',
+                color: 'rgba(255,255,255,0.28)',
+                textDecoration: 'line-through',
+                textDecorationColor: 'rgba(255,255,255,0.12)',
+                paddingRight: '1.5rem',
+              }}>
+                {t(row.beforeKey)}
+              </span>
+              <div style={{
+                display: 'flex', alignItems: 'center', gap: 12,
+                paddingLeft: '2rem',
+                borderLeft: '1px solid rgba(255,255,255,0.06)',
+              }}>
+                <span style={{
+                  width: 8, height: 8, borderRadius: '50%',
+                  background: row.color, boxShadow: `0 0 8px ${row.color}`,
+                  flexShrink: 0,
+                }} />
+                <span style={{
+                  fontSize: '0.95rem', fontWeight: 600,
+                  color: row.color, lineHeight: 1.4,
+                }}>
+                  {t(row.afterKey)}
                 </span>
               </div>
             </div>
           ))}
         </motion.div>
+
+        {/* Disclaimer */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          style={{
+            textAlign: 'center',
+            marginTop: '2rem',
+            fontSize: '0.85rem',
+            color: 'rgba(255,255,255,0.45)',
+            lineHeight: 1.6,
+          }}
+        >
+          {t('disclaimer')}
+        </motion.p>
+
       </div>
     </section>
   )

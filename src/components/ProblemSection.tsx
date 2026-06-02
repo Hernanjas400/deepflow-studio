@@ -11,11 +11,11 @@ const PROBLEMS = [
 
 const container: Variants = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
+  visible: { transition: { staggerChildren: 0.13, delayChildren: 0.1 } },
 }
 
 const card: Variants = {
-  hidden: { opacity: 0, y: 32 },
+  hidden: { opacity: 0, y: 28 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: 'easeOut' } },
 }
 
@@ -25,36 +25,72 @@ export default function ProblemSection() {
   return (
     <section
       id="problem"
-      className="relative py-28 px-6 lg:px-10 overflow-hidden"
-      style={{ background: '#050505' }}
+      className="relative overflow-hidden"
+      style={{ scrollMarginTop: '80px', background: '#0d0d0f', paddingTop: '7rem', paddingBottom: '7rem' }}
     >
-      <div
-        className="blob"
-        style={{
-          width: '50vw',
-          height: '40vh',
-          bottom: '-5%',
-          left: '-10%',
-          background: 'rgba(255, 47, 209, 0.06)',
-          animationDuration: '16s',
-        }}
-      />
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        background: 'radial-gradient(ellipse at 50% 80%, rgba(123,44,255,0.08) 0%, rgba(0,209,255,0.04) 40%, transparent 70%)',
+        pointerEvents: 'none',
+      }} />
+      <div className="blob" style={{ width:'50vw', height:'40vh', bottom:'-5%', left:'-10%', background:'rgba(255,47,209,0.05)', animationDuration:'16s' }} />
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-12 lg:px-20">
+
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16 text-center max-w-3xl mx-auto"
+          transition={{ duration: 0.65 }}
+          style={{ textAlign: 'center' }}
         >
-          <span className="text-xs tracking-widest uppercase text-white/30 font-medium">
+          <span style={{
+            fontSize: '0.8rem',
+            letterSpacing: '0.25em',
+            textTransform: 'uppercase',
+            color: '#FF2FD1',
+            fontWeight: 600,
+            display: 'block',
+            marginBottom: '1.5rem',
+          }}>
             {t('badge')}
           </span>
-          <h2 className="mt-3 text-4xl lg:text-5xl font-bold text-white leading-tight">
-            {t('title')}
+
+          <h2 style={{
+            fontSize: 'clamp(2.2rem, 4.1vw, 3.6rem)',
+            fontWeight: 800,
+            color: '#ffffff',
+            lineHeight: 1.1,
+            letterSpacing: '-0.03em',
+            marginBottom: '1.5rem',
+          }}>
+            {t('titleStart')}{' '}
+            <span className="gradient-text-flow">{t('titleEnd')}</span>
           </h2>
-          <p className="mt-4 text-white/50 text-lg leading-relaxed">{t('subtitle')}</p>
+
+          <p style={{
+            fontSize: 'clamp(1.1rem, 2vw, 1.4rem)',
+            fontWeight: 400,
+            color: 'rgba(255,255,255,0.6)',
+            lineHeight: 1.65,
+            maxWidth: 620,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            marginBottom: '3rem',
+          }}>
+            {t('subtitle')}
+          </p>
+
+          <p style={{
+            fontSize: 'clamp(1rem, 1.6vw, 1.15rem)',
+            fontWeight: 600,
+            color: '#00D1FF',
+            lineHeight: 1.6,
+            marginBottom: '4rem',
+          }}>
+            {t('tension')}
+          </p>
         </motion.div>
 
         <motion.div
@@ -68,40 +104,88 @@ export default function ProblemSection() {
             <motion.div
               key={p.key}
               variants={card}
-              className="relative glass rounded-3xl p-8 flex flex-col gap-5 overflow-hidden"
+              className="relative flex flex-col overflow-hidden"
+              style={{
+                background: 'rgba(255,255,255,0.055)',
+                border: '1px solid rgba(255,255,255,0.12)',
+                borderRadius: 20,
+                padding: '2rem 1.75rem 1.75rem',
+                backdropFilter: 'blur(16px)',
+                WebkitBackdropFilter: 'blur(16px)',
+              }}
             >
-              <span
-                aria-hidden
-                className="absolute top-4 right-6 text-6xl font-black leading-none select-none pointer-events-none"
-                style={{ color: `${p.color}12`, fontWeight: 900 }}
-              >
+              <span aria-hidden style={{
+                position: 'absolute', top: 16, right: 20,
+                fontSize: '5rem', fontWeight: 900,
+                color: `${p.color}12`, lineHeight: 1,
+                userSelect: 'none', pointerEvents: 'none',
+              }}>
                 {p.number}
               </span>
 
-              <div
-                className="w-12 h-12 rounded-2xl flex items-center justify-center text-xl shrink-0"
-                style={{ background: `${p.color}12`, border: `1px solid ${p.color}25` }}
-              >
+              <div style={{
+                width: 48, height: 48, borderRadius: 14,
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: '1.25rem',
+                background: `${p.color}15`,
+                border: `1px solid ${p.color}30`,
+                marginBottom: '1.25rem', flexShrink: 0,
+              }}>
                 <span style={{ color: p.color, filter: `drop-shadow(0 0 6px ${p.color})` }}>
                   {p.icon}
                 </span>
               </div>
 
-              <div className="flex flex-col gap-2">
-                <h3 className="text-xl font-bold text-white">{t(`${p.key}.title`)}</h3>
-                <p className="text-sm text-white/55 leading-relaxed">{t(`${p.key}.description`)}</p>
+              <h3 style={{
+                fontSize: '1.05rem', fontWeight: 700,
+                color: '#ffffff', letterSpacing: '-0.01em',
+                marginBottom: '0.75rem',
+              }}>
+                {t(`${p.key}.title`)}
+              </h3>
+
+              <p style={{
+                fontSize: '0.875rem',
+                color: 'rgba(255,255,255,0.55)',
+                lineHeight: 1.75,
+                marginBottom: '1.5rem',
+                flexGrow: 1,
+              }}>
+                {t(`${p.key}.description`)}
+              </p>
+
+              <div style={{
+                padding: '0.875rem 1rem', borderRadius: 10,
+                background: `${p.color}12`,
+                border: `1px solid ${p.color}25`,
+              }}>
+                <p style={{
+                  fontSize: '0.6rem',
+                  color: 'rgba(255,255,255,0.4)',
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
+                  fontWeight: 600, marginBottom: 5,
+                }}>
+                  {t('resultLabel')}
+                </p>
+                <p style={{
+                  fontSize: '0.875rem',
+                  color: p.color,
+                  lineHeight: 1.55,
+                  fontWeight: 600,
+                }}>
+                  {t(`${p.key}.result`)}
+                </p>
               </div>
 
-              <div
-                aria-hidden
-                className="absolute bottom-0 left-0 right-0 h-px"
-                style={{
-                  background: `linear-gradient(90deg, transparent, ${p.color}40, transparent)`,
-                }}
-              />
+              <div aria-hidden style={{
+                position: 'absolute', bottom: 0, left: 0, right: 0, height: 1,
+                background: `linear-gradient(90deg, transparent, ${p.color}40, transparent)`,
+              }} />
             </motion.div>
           ))}
         </motion.div>
+
       </div>
     </section>
   )

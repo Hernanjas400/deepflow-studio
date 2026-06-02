@@ -6,6 +6,7 @@ import ServicesSection from '@/components/ServicesSection'
 import InfrastructureSection from '@/components/InfrastructureSection'
 import ResultsSection from '@/components/ResultsSection'
 import PhilosophySection from '@/components/PhilosophySection'
+import AboutSection from '@/components/AboutSection'
 import CTASection from '@/components/CTASection'
 
 export default async function LandingPage({
@@ -25,6 +26,7 @@ export default async function LandingPage({
       <InfrastructureSection />
       <ResultsSection />
       <PhilosophySection />
+      <AboutSection />
       <CTASection />
     </>
   )

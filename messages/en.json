@@ -5,114 +5,165 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge": "Operational Intelligence Ecosystem",
-    "tagline": "Operational Intelligence for Modern Business.",
-    "ctaPrimary": "Book a Demo",
-    "ctaSecondary": "Explore the Ecosystem"
-  },
-  "flow": {
-    "step1": "Meta Ads",
-    "step2": "WhatsApp AI",
-    "step3": "Smart CRM",
-    "step4": "Automation",
-    "step5": "Revenue",
-    "step6": "Analytics"
+    "badge": "Deep Flow Studio — Operational Intelligence",
+    "taglineNew": "We turn WhatsApp and manual processes into a system that works for you 24 hours a day.",
+    "ctaPrimary": "Book your free diagnosis",
+    "ctaSecondary": "See how it works",
+    "g1": "No cost",
+    "g2": "30 minutes",
+    "g3": "No commitment",
+    "g4": "Concrete proposal",
+    "panelTitle": "Automated operation",
+    "panelSubtitle": "In real time",
+    "panelFooter": "Illustrative example of an AI-automated operation",
+    "impactLine": "AUTOMATION · AI · GROWTH",
+    "headlineStart": "Your business can",
+    "headlineMid": "sell more",
+    "headlineEnd": "and work less.",
+    "metric1": "Conversations handled",
+    "metric2": "Leads recovered",
+    "metric3": "Quotes sent",
+    "metric4": "Sales closed"
   },
   "problem": {
     "badge": "The problem",
-    "title": "Your business is drowning in tools",
-    "subtitle": "Every system promised to solve everything. The result: more complexity, more friction, less growth.",
+    "titleStart": "Every manual task your team does,",
+    "titleEnd": "AI already handles it automatically.",
+    "subtitle": "The problem isn't a lack of technology. It's that no one integrated it into your real operation.",
+    "tension": "Time lost.  Opportunities lost.  Money lost.",
+    "resultLabel": "Result",
     "tools": {
-      "title": "Too many tools",
-      "description": "CRM, WhatsApp, email, ads, analytics in separate silos. The data you need is always in another system."
+      "title": "Unautomated messages",
+      "description": "Queries answered manually, one by one, every day. Your team spends hours on repetitive tasks while new clients keep coming in.",
+      "result": "Slow response times and lost opportunities."
     },
     "manual": {
-      "title": "Endless manual tasks",
-      "description": "One-by-one follow-ups, copying data between platforms, manually answering messages. Your team wastes hours on work AI should be doing."
+      "title": "Leads going cold",
+      "description": "Prospects arrive, but follow-up depends on reminders, spreadsheets or team availability.",
+      "result": "Clients that end up buying from someone else."
     },
     "friction": {
-      "title": "Friction slowing growth",
-      "description": "Leads going cold waiting for a response. Opportunities lost in slow processes. The invisible cost of not automating."
+      "title": "Fragmented information",
+      "description": "WhatsApp, CRM, Excel and separate processes that don't share information with each other.",
+      "result": "Decisions made with incomplete data and an operation that's hard to scale."
     }
   },
   "services": {
-    "title": "The Ecosystem",
-    "subtitle": "Every tool designed to eliminate friction and generate real results.",
+    "titleStart": "Systems that already work.",
+    "titleEnd": "Not demos that never reach production.",
+    "subtitle": "We don't believe in isolated tools. We create ecosystems where WhatsApp, automation and artificial intelligence work as a single system.",
     "wapibots": {
       "name": "WapiBots",
-      "badge": "Star Product",
-      "description": "AI-powered WhatsApp automation. Intelligent conversations, integrated CRM, lead recovery and funnels that convert into real customers.",
-      "features": ["Conversational AI", "Integrated CRM", "Smart Funnels", "Analytics", "AI Agents"]
+      "badge": "Own product",
+      "description": "WhatsApp automation with AI: customer service, appointment management, product catalog and scheduled documents — running 24 hours a day.",
+      "features": ["AI Agent", "Smart Scheduling", "Auto Catalog", "Scheduled Docs", "Interactive Menu"],
+      "cta": "See WapiBots →",
+      "m1label": "More conversions",
+      "m2label": "Automatic response",
+      "m3label": "Lost leads",
+      "m4label": "CRM integrated",
+      "next": "Next phase of the ecosystem →"
     },
     "deepops": {
-      "name": "DeepOps AI",
-      "description": "Operational automation infrastructure. Orchestrate complex processes with artificial intelligence in real time."
+      "name": "Process automation",
+      "description": "We eliminate repetitive tasks by connecting WhatsApp, existing tools and internal processes. Less operational load. More time to sell."
     },
     "deepsales": {
-      "name": "DeepSales AI",
-      "description": "Growth and revenue automation platform. AI SDR, lead scoring and automated nurturing."
+      "name": "Digital presence",
+      "description": "Websites, landing pages and funnels designed to generate real opportunities. Because a pretty website that doesn't sell is still a cost."
     },
     "deeplife": {
-      "name": "DeepLife",
-      "description": "Personal productivity and intelligent life automation systems."
+      "name": "AI consulting",
+      "description": "We analyze your operation and detect which processes are worth automating and which aren't. Real ROI. No experiments."
     }
   },
   "infrastructure": {
-    "badge": "AI Infrastructure",
-    "title": "Technology that works while you sleep",
-    "subtitle": "A complete AI stack designed to run your business on autopilot.",
-    "cap1Title": "AI Automation",
-    "cap1Desc": "Processes that run themselves, 24/7, without human intervention.",
-    "cap2Title": "Conversational AI",
-    "cap2Desc": "AI agents that talk, understand, and convert on your behalf.",
-    "cap3Title": "Predictive Intelligence",
-    "cap3Desc": "Anticipate your customers' behavior before they act.",
-    "cap4Title": "Workflow Automation",
-    "cap4Desc": "Complex flows orchestrated with surgical precision.",
-    "cap5Title": "AI Operations",
-    "cap5Desc": "Your entire operation managed by intelligent systems.",
-    "cap6Title": "Omnichannel Systems",
-    "cap6Desc": "WhatsApp, email, ads, CRM: all connected, all synchronized."
+    "badge": "Method",
+    "titleStart": "We don't start with technology.",
+    "titleEnd": "We start with your business.",
+    "subtitle": "Six steps to transform manual processes into an automated and scalable operation.",
+    "stage1": "DISCOVER",
+    "stage2": "BUILD",
+    "stage3": "SCALE",
+    "footer": "Technology, automation and AI working as a single system",
+    "s1title": "01 · Diagnosis",
+    "s1desc": "We discover where time, money and opportunities are being lost in your current operation.",
+    "s2title": "02 · Strategy",
+    "s2desc": "We design an automation plan with real impact. We only automate what generates results.",
+    "s3title": "03 · Implementation",
+    "s3desc": "We integrate the solution into the tools you already use. Without changing the way you work.",
+    "s4title": "04 · Operation",
+    "s4desc": "Your system starts working autonomously. Faster, more predictable and scalable.",
+    "s5title": "05 · Measurement",
+    "s5desc": "Clear metrics and complete visibility of results. You know exactly what's happening.",
+    "s6title": "06 · Evolution",
+    "s6desc": "The solution grows with your business. The system improves as your operation scales."
   },
   "results": {
-    "badge": "Real results",
-    "title": "Numbers that speak for themselves",
-    "subtitle": "The systems we implement generate measurable impact from the first month.",
-    "m1": "More operational efficiency",
-    "m2": "More lead conversions",
-    "m3": "Uninterrupted operations",
-    "m4": "Fewer manual tasks",
-    "m5": "Lost leads",
-    "m6": "Unlimited scalability",
+    "badge": "Results",
+    "titleStart": "We implement.",
+    "titleEnd": "We don't just promise.",
+    "subtitle": "Technology with real impact. Not technology for the sake of it.",
+    "m1value": "24/7",
+    "m1label": "Continuous operation",
+    "m2value": "−80%",
+    "m2label": "Less manual tasks",
+    "m3value": "0",
+    "m3label": "Opportunities without follow-up",
+    "m4value": "100%",
+    "m4label": "Centralized information",
+    "m5value": "Scalable",
+    "m5label": "Ready to grow",
+    "m6value": "Full control",
+    "m6label": "Real-time metrics",
     "beforeLabel": "Before",
     "afterLabel": "After",
-    "before1": "Manual follow-up",
-    "after1": "AI responds in seconds",
-    "before2": "Data in silos",
-    "after2": "Everything connected and synced",
-    "before3": "Lost leads",
-    "after3": "0 missed opportunities",
-    "before4": "9-to-6 operations",
-    "after4": "24/7 automated operations"
+    "before1": "Manual and slow responses",
+    "after1": "Automatic attention in seconds",
+    "before2": "Disconnected systems",
+    "after2": "Information integrated in real time",
+    "before3": "Leads without follow-up",
+    "after3": "Automated recovery processes",
+    "before4": "Operation limited by hours",
+    "after4": "Continuous 24/7 operation",
+    "disclaimer": "Every implementation is different. Results depend on the process, industry and level of automation applied."
   },
   "philosophy": {
-    "preQuote": "Technology should",
-    "highlight": "eliminate human friction.",
-    "attribution": "Deep Flow Studio — Core Philosophy",
-    "line1": "We don't build software.",
-    "line2": "We build systems that think, act, and improve on their own.",
-    "line3": "So you can focus on what truly matters."
+    "badge": "Differentiator",
+    "preQuote": "We understand both dimensions:",
+    "highlight": "the business and the technology.",
+    "subtitle": "We don't implement tools. We design systems that work in real operations.",
+    "d1title": "Business + Technology",
+    "d1desc": "A systems analyst in charge of every project. No intermediaries. No generic solutions.",
+    "d2title": "Own development",
+    "d2desc": "WapiBots is technology developed by us. We don't resell third-party tools.",
+    "d3title": "Local support",
+    "d3desc": "A single technical and commercial contact. From start to finish. In your time zone."
+  },
+  "about": {
+    "badge": "Who we are",
+    "titleStart": "Three technological revolutions.",
+    "titleEnd": "Always on the inside.",
+    "quote": "We don't follow trends. We implement what generates results.",
+    "text1": "From the first computer systems and the rise of the Internet, through the mobile revolution and up to today's artificial intelligence. Over four decades observing how technology changes and how it impacts business.",
+    "text2": "Today we apply that experience to help companies integrate AI where it truly generates value."
   },
   "contact": {
-    "badge": "Get started",
-    "title": "Ready to operate in AI mode",
-    "subtitle": "Tell us about your business and in 48h we'll show you exactly how we automate it.",
+    "badge": "Start today",
+    "titleStart": "The future of your operation",
+    "titleEnd": "starts with a conversation.",
+    "subtitle": "30 minutes, no cost, no technical jargon. We analyze your business and show you exactly what can be optimized. The decision is yours.",
+    "guarantee1": "Free diagnosis",
+    "guarantee2": "30-minute meeting",
+    "guarantee3": "No commitment",
+    "guarantee4": "Concrete proposal",
+    "guaranteeTitle": "What's included",
     "namePlaceholder": "Your name",
     "emailPlaceholder": "you@email.com",
     "messagePlaceholder": "Tell us about your business and what you want to automate...",
-    "submit": "Send message",
-    "orText": "or prefer",
-    "demo": "Book a demo",
-    "success": "Message received! We'll get back to you within 48h."
+    "submit": "Book your free diagnosis",
+    "demo": "Book your free diagnosis",
+    "orText": "or if you prefer",
+    "success": "We received your message! We'll contact you within 48 hours."
   }
 }
