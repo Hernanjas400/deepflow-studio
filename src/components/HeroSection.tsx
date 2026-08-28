@@ -21,13 +21,6 @@ const item: Variants = {
   },
 }
 
-const METRICS = [
-  { value: '231', labelKey: 'metric1', color: '#00D1FF', tag: 'LIVE' },
-  { value: '47',  labelKey: 'metric2', color: '#7B2CFF', tag: 'AI'  },
-  { value: '12',  labelKey: 'metric3', color: '#FF2FD1', tag: 'AUTO'},
-  { value: '4',   labelKey: 'metric4', color: '#00D1FF', tag: '$'   },
-] as const
-
 export default function HeroSection() {
   const t = useTranslations('hero')
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -128,142 +121,97 @@ export default function HeroSection() {
   }, [])
 
   return (
-    <section className="relative min-h-[calc(100vh-68px)] flex items-center overflow-hidden bg-brand-black">
+    <section
+      className="relative flex min-h-[calc(100svh-64px)] items-center overflow-hidden bg-brand-black"
+      style={{
+        paddingTop: 'clamp(2.5rem, 6vh, 4.5rem)',
+        paddingBottom: 'clamp(2.5rem, 6vh, 4.5rem)',
+      }}
+    >
 
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full pointer-events-none"
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 h-full w-full"
         style={{ opacity: 0.7 }}
       />
 
-      <div className="blob" style={{ width:'55vw', height:'55vh', top:'-15%', left:'-12%', background:'rgba(123,44,255,0.12)', animationDuration:'9s' }} />
-      <div className="blob" style={{ width:'45vw', height:'50vh', top:'-8%', right:'-10%', background:'rgba(0,209,255,0.08)', animationDuration:'11s', animationDelay:'-3s', animationDirection:'reverse' }} />
-      <div className="absolute inset-0 hero-grid opacity-40" />
-      <div className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none" style={{ background:'linear-gradient(to top, #080808, transparent)' }} />
+      <div aria-hidden="true" className="blob" style={{ width:'55vw', height:'55vh', top:'-15%', left:'-12%', background:'rgba(123,44,255,0.12)', animationDuration:'9s' }} />
+      <div aria-hidden="true" className="blob" style={{ width:'45vw', height:'50vh', top:'-8%', right:'-10%', background:'rgba(0,209,255,0.08)', animationDuration:'11s', animationDelay:'-3s', animationDirection:'reverse' }} />
+      <div aria-hidden="true" className="hero-grid absolute inset-0 opacity-40" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-32" style={{ background:'linear-gradient(to top, #080808, transparent)' }} />
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto py-20 lg:py-28" style={{ paddingLeft: 56, paddingRight: 56 }}>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
-          {/* IZQUIERDA */}
-          <motion.div variants={container} initial="hidden" animate="visible" className="flex flex-col gap-3">
-
-            <motion.div variants={item}>
-              <p style={{ fontSize:'0.75rem', letterSpacing:'0.25em', color:'rgba(255,255,255,0.35)', textTransform:'uppercase', fontWeight:700, margin:0 }}>
-                {t('impactLine')}
-              </p>
-            </motion.div>
-
-            <motion.div variants={item}>
-              <h1 style={{ fontSize:'clamp(2.6rem,5.0vw,3.6rem)', fontWeight:800, color:'#ffffff', lineHeight:1.05, letterSpacing:'-0.03em', margin:0 }}>
-                {t('headlineStart')}<br />
-                <span className="gradient-text-flow">{t('headlineMid')}</span><br />
-                {t('headlineEnd')}
-              </h1>
-            </motion.div>
-
-            <motion.div variants={item}>
-              <p style={{ fontSize:'1.05rem', color:'rgba(255,255,255,0.55)', lineHeight:1.65, margin:0, maxWidth:460 }}>
-                {t('taglineNew')}
-              </p>
-            </motion.div>
-
-            <motion.div variants={item} style={{ display:'flex', gap:16, flexWrap:'wrap', marginTop:4 }}>
-              <a
-                href="#contact"
-                className="btn-primary"
-                style={{ padding:'0.8rem 2rem', borderRadius:9999, fontSize:'0.95rem', fontWeight:600, color:'#fff', textDecoration:'none', display:'inline-flex', alignItems:'center' }}
-              >
-                {t('ctaPrimary')}
-              </a>
-              <a
-                href="#ecosystem"
-                className="btn-secondary"
-                style={{ padding:'0.8rem 2rem', borderRadius:9999, fontSize:'0.95rem', fontWeight:500, color:'rgba(255,255,255,0.75)', textDecoration:'none', display:'inline-flex', alignItems:'center' }}
-              >
-                {t('ctaSecondary')}
-              </a>
-            </motion.div>
-
-            <motion.div variants={item} style={{ display:'flex', flexWrap:'wrap', gap:'8px 24px', marginTop:4 }}>
-              {[t('g1'), t('g2'), t('g3'), t('g4')].map((g) => (
-                <span key={g} style={{ fontSize:'0.82rem', color:'rgba(255,255,255,0.4)', display:'flex', alignItems:'center', gap:6 }}>
-                  <span style={{ color:'#00D1FF', fontSize:'0.75rem' }}>✔</span> {g}
-                </span>
-              ))}
-            </motion.div>
-
+      <div
+        className="relative z-10 mx-auto w-full max-w-6xl px-5 py-16 sm:px-8 sm:py-20 lg:px-14 lg:py-24"
+        style={{ transform: 'translateY(clamp(1rem, 2vh, 1.5rem))' }}
+      >
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="visible"
+          className="mx-auto flex max-w-5xl flex-col items-center text-center"
+        >
+          <motion.div variants={item} style={{ position: 'relative', top: '5mm' }}>
+            <p className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.035] px-4 py-2 text-[0.68rem] font-bold uppercase tracking-[0.22em] text-white/60 backdrop-blur-sm sm:text-xs">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-blue shadow-[0_0_10px_#00D1FF]" />
+              {t('impactLine')}
+            </p>
           </motion.div>
 
-          {/* PANEL MÉTRICAS */}
+          <motion.div variants={item} style={{ marginTop: 'clamp(1.5rem, 3vh, 2rem)' }}>
+            <h1 className="text-[clamp(2.2rem,7vw,5.25rem)] font-extrabold leading-[0.98] tracking-[-0.045em] text-white">
+              <span className="block">{t('headlineStart')}</span>
+              <span className="gradient-text-flow block py-[0.08em]">{t('headlineMid')}</span>
+              <span className="block">{t('headlineEnd')}</span>
+            </h1>
+          </motion.div>
+
+          <motion.div variants={item} style={{ marginTop: 'clamp(1.5rem, 3vh, 1.75rem)' }}>
+            <p className="mx-auto max-w-3xl text-base leading-relaxed text-white/60 sm:text-lg lg:text-xl lg:leading-relaxed">
+              {t('taglineNew')}
+            </p>
+          </motion.div>
+
           <motion.div
-            initial={{ opacity:0, x:30 }}
-            animate={{ opacity:1, x:0 }}
-            transition={{ duration:0.65, ease:'easeOut', delay:0.25 }}
-            className="flex justify-center lg:justify-end"
+            variants={item}
+            className="flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row sm:gap-4"
+            style={{ marginTop: 'clamp(2rem, 4vh, 2.75rem)' }}
           >
-            <div className="glass-blue rounded-3xl w-full max-w-xs" style={{ padding:'1.5rem', border:'1px solid rgba(0,209,255,0.15)' }}>
-
-              <div style={{ marginBottom:'1rem' }}>
-                <p style={{ fontSize:'0.65rem', letterSpacing:'0.18em', textTransform:'uppercase', color:'rgba(255,255,255,0.85)', marginBottom:8, fontWeight:600 }}>
-                  {t('panelTitle')}
-                </p>
-                <div style={{ display:'flex', alignItems:'center', gap:8 }}>
-                  <span style={{ width:7, height:7, borderRadius:'50%', background:'#00D1FF', boxShadow:'0 0 6px #00D1FF', flexShrink:0, display:'inline-block' }} />
-                  <span style={{ fontSize:'0.9rem', fontWeight:600, color:'rgba(255,255,255,0.85)' }}>
-                    {t('panelSubtitle')}
-                  </span>
-                </div>
-              </div>
-
-              <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
-                {METRICS.map((m, i) => (
-                  <motion.div
-                    key={m.labelKey}
-                    initial={{ opacity:0, x:-12 }}
-                    animate={{ opacity:1, x:0 }}
-                    transition={{ duration:0.35, ease:'easeOut', delay:0.4 + i * 0.08 }}
-                    style={{
-                      background:'rgba(255,255,255,0.03)',
-                      border:'1px solid rgba(255,255,255,0.07)',
-                      borderRadius:10,
-                      padding:'10px 14px',
-                      display:'flex',
-                      alignItems:'center',
-                      justifyContent:'space-between',
-                      gap:8,
-                    }}
-                  >
-                    <div style={{ display:'flex', alignItems:'center', gap:8, minWidth:0 }}>
-                      <span style={{
-                        fontSize:'0.6rem',
-                        background:`${m.color}18`,
-                        color:m.color,
-                        border:`1px solid ${m.color}35`,
-                        borderRadius:4,
-                        padding:'2px 6px',
-                        fontWeight:700,
-                        letterSpacing:'0.05em',
-                        flexShrink:0,
-                      }}>
-                        {m.tag}
-                      </span>
-                      <span style={{ fontSize:'0.8rem', color:'rgba(255,255,255,0.85)', whiteSpace:'nowrap' }}>
-                        {t(m.labelKey)}
-                      </span>
-                    </div>
-                    <span style={{ fontSize:'1.3rem', fontWeight:800, color:m.color, flexShrink:0 }}>{m.value}</span>
-                  </motion.div>
-                ))}
-              </div>
-
-              <p style={{ fontSize:'0.7rem', color:'rgba(255,255,255,0.85)', textAlign:'center', marginTop:14, lineHeight:1.6 }}>
-                {t('panelFooter')}
-              </p>
-
-            </div>
+            <a
+              href="#contact"
+              className="btn-primary inline-flex min-h-14 items-center justify-center rounded-full px-8 text-base font-semibold text-white no-underline sm:min-w-56"
+            >
+              {t('ctaPrimary')}
+            </a>
+            <a
+              href="#products"
+              className="btn-secondary inline-flex min-h-14 items-center justify-center rounded-full px-8 text-base font-medium text-white/80 no-underline sm:min-w-52"
+            >
+              {t('ctaSecondary')}
+            </a>
           </motion.div>
 
-        </div>
+          <motion.div
+            variants={item}
+            className="flex max-w-3xl flex-wrap justify-center gap-2.5 sm:gap-3"
+            style={{
+              marginTop: 'clamp(1.25rem, 2.5vh, 2rem)',
+              columnGap: 'clamp(0.9rem, 1.8vw, 1.5rem)',
+              rowGap: '0.9rem',
+            }}
+          >
+            {[t('g1'), t('g2'), t('g3'), t('g4')].map((guarantee) => (
+              <span
+                key={guarantee}
+                className="inline-flex min-h-10 items-center gap-2 rounded-full border border-white/10 bg-white/[0.035] px-4 py-2 text-sm text-white/65 backdrop-blur-sm"
+                style={{ padding: '0.65rem 1.25rem' }}
+              >
+                <span aria-hidden="true" className="text-xs font-bold text-brand-blue">✓</span>
+                {guarantee}
+              </span>
+            ))}
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   )
