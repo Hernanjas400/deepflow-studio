@@ -8,15 +8,16 @@ const secondaryServices = [
 ]
 
 const WAPI_METRICS = [
-  { value: '3×', labelKey: 'wapibots.m1label', color: '#00D1FF' },
-  { value: '24/7', labelKey: 'wapibots.m2label', color: '#7B2CFF' },
-  { value: '0', labelKey: 'wapibots.m3label', color: '#FF2FD1' },
-  { value: '100%', labelKey: 'wapibots.m4label', color: '#00D1FF' },
+  { valueKey: 'wapibots.m1value', labelKey: 'wapibots.m1label', color: '#00D1FF', compact: false },
+  { valueKey: 'wapibots.m2value', labelKey: 'wapibots.m2label', color: '#7B2CFF', compact: false },
+  { valueKey: 'wapibots.m3value', labelKey: 'wapibots.m3label', color: '#FF2FD1', compact: true },
+  { valueKey: 'wapibots.m4value', labelKey: 'wapibots.m4label', color: '#00D1FF', compact: true },
 ]
 
 export default async function ServicesSection() {
   const t = await getTranslations('services')
   const wapiFeatures = t.raw('wapibots.features') as string[]
+  const highlightedFeature = t('wapibots.featureHighlight')
 
   return (
     <section
@@ -94,7 +95,7 @@ export default async function ServicesSection() {
             pointerEvents: 'none',
           }} />
 
-          <div style={{ position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2" style={{ position: 'relative', zIndex: 1, gap: '3rem', alignItems: 'center' }}>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
@@ -123,7 +124,7 @@ export default async function ServicesSection() {
                     </span>
                   </div>
                   <p style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.3)', marginTop: 3, letterSpacing: '0.05em' }}>
-                    WhatsApp AI Automation
+                    {t('wapibots.category')}
                   </p>
                 </div>
               </div>
@@ -133,17 +134,26 @@ export default async function ServicesSection() {
               </p>
 
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                {wapiFeatures.map((feature: string) => (
-                  <span key={feature} style={{
-                    fontSize: '0.75rem', padding: '4px 12px', borderRadius: 9999,
-                    fontWeight: 500,
-                    background: 'rgba(255,255,255,0.06)',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    color: 'rgba(255,255,255,0.75)',
-                  }}>
-                    {feature}
-                  </span>
-                ))}
+                {wapiFeatures.map((feature: string) => {
+                  const isHighlighted = feature === highlightedFeature
+
+                  return (
+                    <span key={feature} style={{
+                      fontSize: '0.75rem', padding: '4px 12px', borderRadius: 9999,
+                      fontWeight: isHighlighted ? 700 : 500,
+                      background: isHighlighted
+                        ? 'linear-gradient(135deg, rgba(0,209,255,0.18), rgba(123,44,255,0.18))'
+                        : 'rgba(255,255,255,0.06)',
+                      border: isHighlighted
+                        ? '1px solid rgba(0,209,255,0.4)'
+                        : '1px solid rgba(255,255,255,0.1)',
+                      boxShadow: isHighlighted ? '0 0 16px rgba(0,209,255,0.12)' : 'none',
+                      color: isHighlighted ? '#ffffff' : 'rgba(255,255,255,0.75)',
+                    }}>
+                      {feature}
+                    </span>
+                  )
+                })}
               </div>
 
               <a
@@ -170,8 +180,13 @@ export default async function ServicesSection() {
                   background: 'rgba(255,255,255,0.04)',
                   border: '1px solid rgba(255,255,255,0.08)',
                 }}>
-                  <span style={{ fontSize: '2rem', fontWeight: 800, color: m.color, lineHeight: 1 }}>
-                    {m.value}
+                  <span style={{
+                    fontSize: m.compact ? 'clamp(1rem, 2vw, 1.35rem)' : '2rem',
+                    fontWeight: 800,
+                    color: m.color,
+                    lineHeight: m.compact ? 1.15 : 1,
+                  }}>
+                    {t(m.valueKey)}
                   </span>
                   <span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.45)', lineHeight: 1.3 }}>
                     {t(m.labelKey)}
