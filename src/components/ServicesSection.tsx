@@ -77,12 +77,11 @@ export default async function ServicesSection() {
         </div>
 
         {/* WAPIBOTS */}
-        <div style={{
+        <div className="p-5 sm:p-10" style={{
           position: 'relative',
           borderRadius: 24,
           overflow: 'hidden',
           marginBottom: '1.5rem',
-          padding: '2.5rem',
           background: 'linear-gradient(135deg, rgba(0,209,255,0.07) 0%, rgba(123,44,255,0.07) 100%)',
           border: '1px solid rgba(0,209,255,0.2)',
           boxShadow: '0 0 80px rgba(0,209,255,0.07), 0 0 160px rgba(123,44,255,0.04)',
@@ -95,7 +94,7 @@ export default async function ServicesSection() {
             pointerEvents: 'none',
           }} />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2" style={{ position: 'relative', zIndex: 1, gap: '3rem', alignItems: 'center' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center" style={{ position: 'relative', zIndex: 1 }}>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
@@ -172,19 +171,20 @@ export default async function ServicesSection() {
               </a>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+            <div className="grid grid-cols-2 gap-3 min-w-0">
               {WAPI_METRICS.map((m) => (
-                <div key={m.labelKey} style={{
-                  borderRadius: 14, padding: '1.25rem',
+                <div key={m.labelKey} className="p-4 sm:p-5 min-w-0" style={{
+                  borderRadius: 14,
                   display: 'flex', flexDirection: 'column', gap: 6,
                   background: 'rgba(255,255,255,0.04)',
                   border: '1px solid rgba(255,255,255,0.08)',
                 }}>
                   <span style={{
-                    fontSize: m.compact ? 'clamp(1rem, 2vw, 1.35rem)' : '2rem',
+                    fontSize: m.compact ? 'clamp(0.9rem, 4vw, 1.35rem)' : 'clamp(1.35rem, 6vw, 2rem)',
                     fontWeight: 800,
                     color: m.color,
                     lineHeight: m.compact ? 1.15 : 1,
+                    wordBreak: 'break-word',
                   }}>
                     {t(m.valueKey)}
                   </span>
@@ -199,7 +199,7 @@ export default async function ServicesSection() {
         </div>
 
         {/* SERVICIOS SECUNDARIOS */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {secondaryServices.map((p) => (
             <div key={p.key} style={{
               background: 'rgba(255,255,255,0.04)',

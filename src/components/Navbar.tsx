@@ -27,14 +27,14 @@ export default function Navbar() {
         }}
       />
 
-      <div className="relative w-full flex items-center justify-between" style={{ paddingLeft: 56, paddingRight: 56 }}>
+      <div className="relative w-full flex items-center justify-between px-4 sm:px-8 lg:px-14">
 
         {/* Logo */}
-        <div className="flex items-center gap-1.5 select-none">
-          <span style={{ fontSize: '1.35rem', fontWeight: 200, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#ffffff' }}>
+        <div className="flex items-center gap-1.5 select-none min-w-0">
+          <span className="text-[1.1rem] sm:text-[1.35rem]" style={{ fontWeight: 200, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#ffffff' }}>
             DEEP
           </span>
-          <span className="gradient-text" style={{ fontSize: '1.35rem', fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+          <span className="gradient-text text-[1.1rem] sm:text-[1.35rem]" style={{ fontWeight: 800, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
             FLOW
           </span>
           <span style={{ fontSize: '0.6rem', fontWeight: 400, letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginLeft: 4, alignSelf: 'flex-end', marginBottom: 2 }}>
@@ -56,7 +56,7 @@ export default function Navbar() {
         </div>
 
         {/* Bloque derecho */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-3 sm:gap-6">
           <div className="flex items-center gap-2" style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.45)' }}>
             <button
               onClick={() => switchLocale('es')}

@@ -105,7 +105,7 @@ export default function ResultsSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16, marginBottom: 16 }}
+          className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4"
         >
           {METRICS_FEATURED.map((m) => (
             <motion.div
@@ -157,7 +157,7 @@ export default function ResultsSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16, marginBottom: '3rem' }}
+          className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12"
         >
           {METRICS_SECONDARY.map((m) => (
             <motion.div
@@ -210,13 +210,13 @@ export default function ResultsSection() {
             backdropFilter: 'blur(16px)',
           }}
         >
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            padding: '1.25rem 2.5rem',
-            borderBottom: '1px solid rgba(255,255,255,0.06)',
-            background: 'rgba(255,255,255,0.02)',
-          }}>
+          <div
+            className="hidden md:grid md:grid-cols-2 md:px-10 md:py-5"
+            style={{
+              borderBottom: '1px solid rgba(255,255,255,0.06)',
+              background: 'rgba(255,255,255,0.02)',
+            }}
+          >
             <span style={{
               fontSize: '0.7rem', fontWeight: 700,
               letterSpacing: '0.22em', textTransform: 'uppercase',
@@ -237,39 +237,49 @@ export default function ResultsSection() {
           {BEFORE_AFTER.map((row, i) => (
             <div
               key={row.beforeKey}
+              className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-0 p-5 md:px-10 md:py-6 md:items-center"
               style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                padding: '1.5rem 2.5rem',
                 borderBottom: i < BEFORE_AFTER.length - 1 ? '1px solid rgba(255,255,255,0.04)' : 'none',
-                alignItems: 'center',
               }}
             >
-              <span style={{
-                fontSize: '0.95rem',
-                color: 'rgba(255,255,255,0.28)',
-                textDecoration: 'line-through',
-                textDecorationColor: 'rgba(255,255,255,0.12)',
-                paddingRight: '1.5rem',
-              }}>
-                {t(row.beforeKey)}
-              </span>
-              <div style={{
-                display: 'flex', alignItems: 'center', gap: 12,
-                paddingLeft: '2rem',
-                borderLeft: '1px solid rgba(255,255,255,0.06)',
-              }}>
-                <span style={{
-                  width: 8, height: 8, borderRadius: '50%',
-                  background: row.color, boxShadow: `0 0 8px ${row.color}`,
-                  flexShrink: 0,
-                }} />
-                <span style={{
-                  fontSize: '0.95rem', fontWeight: 600,
-                  color: row.color, lineHeight: 1.4,
+              <div className="flex flex-col gap-1 md:pr-6">
+                <span className="md:hidden" style={{
+                  fontSize: '0.6rem', fontWeight: 700,
+                  letterSpacing: '0.22em', textTransform: 'uppercase',
+                  color: 'rgba(255,255,255,0.4)',
                 }}>
-                  {t(row.afterKey)}
+                  {t('beforeLabel')}
                 </span>
+                <span style={{
+                  fontSize: '0.95rem',
+                  color: 'rgba(255,255,255,0.4)',
+                  textDecoration: 'line-through',
+                  textDecorationColor: 'rgba(255,255,255,0.18)',
+                }}>
+                  {t(row.beforeKey)}
+                </span>
+              </div>
+              <div className="flex flex-col gap-1 md:pl-8 md:border-l md:border-white/[0.06]">
+                <span className="md:hidden" style={{
+                  fontSize: '0.6rem', fontWeight: 700,
+                  letterSpacing: '0.22em', textTransform: 'uppercase',
+                  color: `${row.color}b3`,
+                }}>
+                  {t('afterLabel')}
+                </span>
+                <div className="flex items-center gap-3">
+                  <span style={{
+                    width: 8, height: 8, borderRadius: '50%',
+                    background: row.color, boxShadow: `0 0 8px ${row.color}`,
+                    flexShrink: 0,
+                  }} />
+                  <span style={{
+                    fontSize: '0.95rem', fontWeight: 600,
+                    color: row.color, lineHeight: 1.4,
+                  }}>
+                    {t(row.afterKey)}
+                  </span>
+                </div>
               </div>
             </div>
           ))}

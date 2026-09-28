@@ -136,7 +136,7 @@ export default function InfrastructureSection() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}
+                className="grid grid-cols-1 md:grid-cols-2 gap-4"
               >
                 {stage.steps.map((step) => (
                   <motion.div

@@ -203,7 +203,7 @@ export default function CTASection() {
           </p>
         </motion.div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'start' }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
 
           <motion.div
             initial={{ opacity: 0, x: -24 }}

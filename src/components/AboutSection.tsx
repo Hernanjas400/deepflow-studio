@@ -22,7 +22,7 @@ export default function AboutSection() {
 
       <div className="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-12 lg:px-20">
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'center' }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
 
           {/* Izquierda */}
           <motion.div

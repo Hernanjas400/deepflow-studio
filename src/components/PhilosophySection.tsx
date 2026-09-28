@@ -86,7 +86,7 @@ export default function PhilosophySection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-5"
         >
           {DIFFERENTIALS.map((d) => (
             <motion.div
