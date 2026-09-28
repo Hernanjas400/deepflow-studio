@@ -6,7 +6,7 @@
   },
   "hero": {
     "badge": "Deep Flow Studio — Operational Intelligence",
-    "taglineNew": "We turn WhatsApp and manual processes into a system that works for you 24 hours a day.",
+    "taglineNew": "We turn WhatsApp, Telegram and manual processes into a system that works for you 24 hours a day.",
     "ctaPrimary": "Book your free diagnosis",
     "ctaSecondary": "See how it works",
     "g1": "No cost",
@@ -44,18 +44,18 @@
     },
     "friction": {
       "title": "Fragmented information",
-      "description": "WhatsApp, CRM, Excel and separate processes that don't share information with each other.",
+      "description": "WhatsApp, Telegram, CRM, Excel and separate processes that don't share information with each other.",
       "result": "Decisions made with incomplete data and an operation that's hard to scale."
     }
   },
   "services": {
     "titleStart": "Systems that already work.",
     "titleEnd": "Not demos that never reach production.",
-    "subtitle": "We don't believe in isolated tools. We create ecosystems where WhatsApp, automation and artificial intelligence work as a single system.",
+    "subtitle": "We don't believe in isolated tools. We create ecosystems where messaging, automation and artificial intelligence work as a single system.",
     "wapibots": {
       "name": "WapiBots",
       "badge": "Own product",
-      "category": "Sales platform powered by WhatsApp and AI",
+      "category": "Sales platform powered by WhatsApp, Telegram and AI",
       "description": "Centralizes messages and customers, organizes opportunities in a pipeline, manages scheduling and catalog, and automates sales, orders, and payments 24/7.",
       "features": ["Smart dashboard", "Centralized messaging", "Conversational CRM", "Sales pipeline", "Smart scheduling", "Product catalog", "Automated sales", "Orders and payments"],
       "featureHighlight": "Automated sales",
@@ -72,7 +72,7 @@
     },
     "deepops": {
       "name": "Process automation",
-      "description": "We eliminate repetitive tasks by connecting WhatsApp, existing tools and internal processes. Less operational load. More time to sell."
+      "description": "We eliminate repetitive tasks by connecting messaging, existing tools and internal processes. Less operational load. More time to sell."
     },
     "deepsales": {
       "name": "Digital presence",

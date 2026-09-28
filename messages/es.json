@@ -6,7 +6,7 @@
   },
   "hero": {
     "badge": "Deep Flow Studio — Inteligencia operacional",
-    "taglineNew": "Convertimos WhatsApp y procesos manuales en un sistema que trabaja para vos las 24 horas.",
+    "taglineNew": "Convertimos WhatsApp, Telegram y procesos manuales en un sistema que trabaja para vos las 24 horas.",
     "ctaPrimary": "Reservá tu diagnóstico",
     "ctaSecondary": "Ver cómo funciona",
     "g1": "Sin costo",
@@ -44,18 +44,18 @@
     },
     "friction": {
       "title": "Información fragmentada",
-      "description": "WhatsApp, CRM, Excel y procesos separados que no comparten información entre sí.",
+      "description": "WhatsApp, Telegram, CRM, Excel y procesos separados que no comparten información entre sí.",
       "result": "Decisiones tomadas con datos incompletos y una operación difícil de escalar."
     }
   },
   "services": {
     "titleStart": "Sistemas que ya funcionan.",
     "titleEnd": "No demos que nunca llegan a producción.",
-    "subtitle": "No creemos en herramientas aisladas. Creamos ecosistemas donde WhatsApp, automatización e inteligencia artificial trabajan como un único sistema.",
+    "subtitle": "No creemos en herramientas aisladas. Creamos ecosistemas donde mensajería, automatización e inteligencia artificial trabajan como un único sistema.",
     "wapibots": {
       "name": "WapiBots",
       "badge": "Producto propio",
-      "category": "Plataforma comercial con WhatsApp e IA",
+      "category": "Plataforma comercial con WhatsApp, Telegram e IA",
       "description": "Centraliza mensajes y clientes, organiza oportunidades en un pipeline, gestiona agenda y catálogo, y automatiza ventas, pedidos y cobros las 24 horas.",
       "features": ["Panel inteligente", "Mensajes centralizados", "CRM conversacional", "Pipeline de ventas", "Agenda inteligente", "Catálogo de productos", "Venta automática", "Pedidos y cobros"],
       "featureHighlight": "Venta automática",
@@ -72,7 +72,7 @@
     },
     "deepops": {
       "name": "Automatización de procesos",
-      "description": "Eliminamos tareas repetitivas conectando WhatsApp, herramientas existentes y procesos internos. Menos carga operativa. Más tiempo para vender."
+      "description": "Eliminamos tareas repetitivas conectando mensajería, herramientas existentes y procesos internos. Menos carga operativa. Más tiempo para vender."
     },
     "deepsales": {
       "name": "Presencia digital",
