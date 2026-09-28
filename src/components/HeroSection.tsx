@@ -138,7 +138,7 @@ export default function HeroSection() {
       <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-32" style={{ background:'linear-gradient(to top, #080808, transparent)' }} />
 
       <div
-        className="relative z-10 mx-auto w-full max-w-6xl px-5 pt-2 pb-12 sm:px-8 sm:pt-10 sm:pb-20 lg:px-14 lg:py-24 lg:[transform:translateY(clamp(1rem,2vh,1.5rem))]"
+        className="relative z-10 mx-auto w-full max-w-6xl px-5 pt-2 pb-12 sm:px-8 lg:px-14 lg:[transform:translateY(clamp(1rem,2vh,1.5rem))]"
       >
         <motion.div
           variants={container}
