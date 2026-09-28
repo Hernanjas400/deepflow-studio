@@ -17,11 +17,12 @@
   height: 64px;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/*
+ * Preflight de Tailwind v4 (@layer base) ya aplica box-sizing: border-box a
+ * *, ::before, ::after y resetea márgenes en todos los elementos usados en
+ * este proyecto (p, h1-h6, ul, ol, fieldset, etc.). Cualquier reset extra
+ * DEBE ir dentro de @layer base, si no gana sobre las utilidades.
+ */
 
 html,
 body {
