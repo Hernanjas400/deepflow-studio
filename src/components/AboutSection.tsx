@@ -9,8 +9,8 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden"
-      style={{ scrollMarginTop: '80px', background: '#080808', paddingTop: '7rem', paddingBottom: '7rem' }}
+      className="relative overflow-hidden py-16 lg:py-28"
+      style={{ scrollMarginTop: '80px', background: '#080808' }}
     >
       <div style={{
         position: 'absolute',
@@ -30,6 +30,7 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.65 }}
+            className="text-center md:text-left"
             style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}
           >
             <span style={{
@@ -72,6 +73,7 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.65, delay: 0.15 }}
+            className="text-center md:text-left"
             style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}
           >
             <p style={{
@@ -94,12 +96,15 @@ export default function AboutSection() {
               {t('text2')}
             </p>
 
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 12,
-              paddingTop: '0.5rem',
-            }}>
+            <div
+              className="justify-center md:justify-start"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 12,
+                paddingTop: '0.5rem',
+              }}
+            >
               <div style={{
                 width: 8,
                 height: 8,
@@ -109,7 +114,7 @@ export default function AboutSection() {
                 flexShrink: 0,
                 animation: 'glow-pulse 2s ease-in-out infinite',
               }} />
-              <div style={{ height: 1, flex: 1, background: 'rgba(255,255,255,0.08)' }} />
+              <div className="hidden md:block" style={{ height: 1, flex: 1, background: 'rgba(255,255,255,0.08)' }} />
               <span style={{
                 fontSize: '0.7rem',
                 letterSpacing: '0.15em',

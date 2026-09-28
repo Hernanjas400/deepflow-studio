@@ -144,8 +144,8 @@ export default function CTASection() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden"
-      style={{ background: '#0a0a0c', scrollMarginTop: '80px', paddingTop: '7rem', paddingBottom: '5rem' }}
+      className="relative overflow-hidden pt-16 pb-12 lg:pt-28 lg:pb-20"
+      style={{ background: '#0a0a0c', scrollMarginTop: '80px' }}
     >
       <CTACanvas />
 
