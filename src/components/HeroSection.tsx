@@ -122,11 +122,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative flex min-h-[calc(100svh-64px)] items-start lg:items-center overflow-hidden bg-brand-black"
-      style={{
-        paddingTop: 'clamp(2.5rem, 6vh, 4.5rem)',
-        paddingBottom: 'clamp(2.5rem, 6vh, 4.5rem)',
-      }}
+      className="relative flex min-h-[calc(100svh-64px)] items-start lg:items-center overflow-hidden bg-brand-black pt-4 pb-10 lg:[padding-top:clamp(2.5rem,6vh,4.5rem)] lg:[padding-bottom:clamp(2.5rem,6vh,4.5rem)]"
     >
 
       <canvas
@@ -150,7 +146,7 @@ export default function HeroSection() {
           animate="visible"
           className="mx-auto flex max-w-5xl flex-col items-center text-center"
         >
-          <motion.div variants={item} style={{ position: 'relative', top: '5mm' }}>
+          <motion.div variants={item} className="relative top-2 lg:top-[5mm]">
             <p className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.035] px-4 py-2 text-[0.68rem] font-bold uppercase tracking-[0.22em] text-white/60 backdrop-blur-sm sm:text-xs">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-blue shadow-[0_0_10px_#00D1FF]" />
               {t('impactLine')}
